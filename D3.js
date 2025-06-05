@@ -146,7 +146,7 @@ const eyeColor = {
   yellow: [],
   brown: [],
   red: [],
-  blue_gray: [],
+  "blue-gray": [],
 };
 
 /* ESERCIZIO 5
@@ -170,14 +170,13 @@ for (let i = 0; i < starWarsCharacters.length; i++) {
     case "red":
       eyeColor.red.push(starWarsCharacters[i]);
       break;
-    case "blue_gray":
-      eyeColor.blue_gray.push(starWarsCharacters[i]);
+    case "blue-gray":
+      eyeColor["blue-gray"].push(starWarsCharacters[i]);
       break;
     default:
-      if (starWarsCharacters[i].eye_color === eyeColor.blue_gray)
-        console.log(
-          "Nessun altro personaggio di Star Wars ha questo colore degli occhi"
-        );
+      console.log(
+        "Nessun altro personaggio di Star Wars ha questo colore degli occhi"
+      );
   }
 }
 console.log(eyeColor);
@@ -219,7 +218,8 @@ if (crewMass < 500) {
   console.log("Warning: Load is over 700");
 } else if (crewMass > 900 && crewMass < 1000) {
   console.log("Critical Load: Over 900");
-} else if (crewMass > 1000) {
+} else {
+  // mass >=S 1000
   console.log("DANGER! OVERLOAD ALERT: escape from ship now!");
 }
 
